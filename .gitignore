@@ -1,0 +1,88 @@
+# Build directories
+build/
+bin/
+obj/
+dist/
+
+# Compiled objects and libraries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Build system files
+Makefile
+*.make
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.workspace
+*.cbp
+*.depend
+*.layout
+
+# Premake5 generated files
+build_premake/
+*.make
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+.clangd
+.vimrc
+.netrwhist
+
+# IDE temp files
+*.VC.db
+.vs/
+
+# CMake (if used)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Output files
+*.ppm
+out.ppm
+frame_*.ppm
+
+# ROM/Data files (optional - uncomment if you want to track these)
+# backgrounds.dat
+# truncated_backgrounds.dat
+
+# Dependencies (if vendored)
+vendor/
+third_party/
+
+# System temp files
+.directory
+.Trash-*
+.AppleDouble
+.LSOverride
+
+# gcov coverage files
+*.gcno
+*.gcda
+*.gcov
+
+# clang-format
+.clang-format
+
+# Tags
+tags
+.tags
+*.ctags
