@@ -4,6 +4,9 @@ bin/
 obj/
 dist/
 
+thirdparty/
+tools/
+
 # Compiled objects and libraries
 *.o
 *.obj
@@ -49,6 +52,23 @@ Thumbs.db
 # IDE temp files
 *.VC.db
 .vs/
+
+# Visual Studio generated project files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.props
+*.vcxproj.targets
+
+# Visual Studio solution files
+*.sln
+
+# Visual Studio folders
+.vs/
+
+# MSBuild intermediate output
+ipch/
+
 
 # CMake (if used)
 CMakeFiles/
