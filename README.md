@@ -4,6 +4,8 @@ This is a C++ Port of Earthbound's Battle Backgrounds. This project depends on S
 
 If you like this project, you might also like the [Earthbound Battle Backgrounds JS](https://github.com/gjtorikian/Earthbound-Battle-Backgrounds-JS), which this project is based on. 
 
+![Usage Animation](https://github.com/0xKitKoi/EarthBoundBattleBackgrounds/blob/84bce3270b16ac2c6c070e950fd68d91d0d5bafb/Usage.gif)
+
 ## Credits
 
 I owe this project to [gjtorikian](https://github.com/gjtorikian) who published the JavaScript Implimentation, and by extension, Mr. Accident of forum.starmen.net for the original battle background generation code.
