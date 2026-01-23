@@ -8,6 +8,7 @@ thirdparty/
 tools/
 
 # Compiled objects and libraries
+ebbg.make
 *.o
 *.obj
 *.a
