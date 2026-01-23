@@ -69,6 +69,9 @@ project "ebbg"
         links { "SDL2" }
         linkoptions { "`pkg-config --libs sdl2`" }
         includedirs { "/usr/include/SDL2" } -- this is so #include <SDL.h> works on linux, because of how SDL2 is setup for windows.
+        postbuildcommands {
+            "{COPY} %{wks.location}/truncated_backgrounds.dat %{cfg.targetdir}"
+        }
 
     filter "system:macosx"
         links { "SDL2" }
