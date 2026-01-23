@@ -9,11 +9,49 @@ If you like this project, you might also like the [Earthbound Battle Backgrounds
 I owe this project to [gjtorikian](https://github.com/gjtorikian) who published the JavaScript Implimentation, and by extension, Mr. Accident of forum.starmen.net for the original battle background generation code.
 I could not find the original code, and had only the JS port to work with. The dat files here are directly from the JS implimentation, as well as the code for addressing the dat file. 
 
+## Usage 
 
-## License
+This program takes in the dat file as command line arguments, as well as the two desired layers.
+  #### USAGE: ``` ./ebbg <path-to-rom> [layer1] [layer2] [frameskip] [aspectRatio] ```
+  - layer1: 0-326 (default: 270)
+  - layer2: 0-326 (default: 269)
+  - frameskip: 1-10   (default: 1)
+  - aspectRatio: 0, 16, 48, 64 (default: 0)
 
-This app is in no way endorsed or affiliated by Nintendo, Ape, HAL Laboratory,
-Shigesato Itoi, etc. It's licensed under MIT.
+
+## Building
+This project uses [Premake5](https://premake.github.io/) for a nice and clean cross platform building system.  
+#### If you are on WINDOWS
+please run the batch scripts: [SDL Setup](https://github.com/0xKitKoi/EarthBoundBattleBackgrounds/blob/main/SDLSetup.bat) and [Visual Studio Setup](https://github.com/0xKitKoi/EarthBoundBattleBackgrounds/blob/main/visualstudiosetup.bat). 
+These download and set up SDL2 for compiling for you. Then simply open the Visual Solution file and build. 
+#### If you are on Linux
+Download [Premake5](https://github.com/premake/premake-core/releases/download/v5.0.0-beta7/premake-5.0.0-beta7-linux.tar.gz) and install SDL2 using your package manager.
+
+You'll need cmake and Simple Direct Media Layer 2 (SDL2) :
+```bash
+wget https://github.com/premake/premake-core/releases/download/v5.0.0-beta7/premake-5.0.0-beta7-linux.tar.gz
+
+# For Debian-based systems (e.g., Ubuntu):
+sudo apt update
+sudo apt install cmake build-essential
+sudo apt install -y \
+  libsdl2-dev \
+  libsdl2-image-dev \
+  libsdl2-ttf-dev
+
+# For Fedora-based systems:
+sudo dnf install -y \
+  SDL2-devel \
+  SDL2_image-devel \
+  SDL2_ttf-devel
+
+# For Arch-based systems:
+sudo pacman -S --noconfirm \
+  sdl2 \
+  sdl2_image \
+  sdl2_ttf
+```
+After installing SDL2, simply run premake5 to generate the MakeFiles, and run make. ``` ./premake5 gmake && make ```
 
 ## How it works
 See [Distorter.hpp](https://github.com/0xKitKoi/EarthBoundBattleBackgrounds/blob/main/rom/Distorter.hpp) for the implimentation
@@ -57,3 +95,7 @@ function:
 
 Different backgrounds use different distortion effects.
 
+## License
+
+This app is in no way endorsed or affiliated by Nintendo, Ape, HAL Laboratory,
+Shigesato Itoi, etc. It's licensed under MIT.
