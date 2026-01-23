@@ -56,6 +56,21 @@ public:
         frequency = C2 * (e.frequency() + e.frequencyAcceleration() * t2);
         compression = 1.0f + (e.compression() + e.compressionAcceleration() * t2) / 256.0f;
         speed = C3 * e.speed() * tick;
+
+        /*
+        ```
+        Offset (y, t) = A sin ( F*y + S*t )
+        ```
+
+        where:
+
+        - _y_ is the vertical coordinate being transformed
+        - _t_ is time that's elapsed
+        - _A_ is the amplitude
+        - _F_ is the frequency
+        - _S_ is the speed or frameskip of the transformation
+        */
+
         
         // Calculate S(y) = amplitude * sin(frequency * y + speed)
         float s = amplitude * std::sin(frequency * y + speed);
